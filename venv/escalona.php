@@ -139,6 +139,7 @@ function linhaDegrauReduzida($A)
 
 function geraSubespaco($A)
 {
+  
   file_put_contents("matriz.json", json_encode($A));
   
   exec("python main.py",$output, $status);
