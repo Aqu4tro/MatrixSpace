@@ -145,12 +145,22 @@
             font-size: 100%;
             cursor: pointer;
         }
+        p.intro {
+            margin-top: 0;
+            margin-bottom: 20px;
+            font-size: 1.2em;
+            color: #555;
+        }
     </style>
 </head>
 
 <body>
 
-    <h1>Olá, Vicente!</h1>
+    <h1>Projeto de Álgebra Linear</h1>
+    <p class="intro">
+        Escalone matrizes e visualize os subespaços fundamentais:<br />
+        <strong>Coluna(A), Linha(A), Núcleo(A) e Núcleo(A<sup>T</sup>)</strong>.
+    </p>
 
     <div class="form-container">
         <form method="get">

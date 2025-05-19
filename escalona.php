@@ -49,7 +49,6 @@ function geraMatriz()
           linhaDegrauReduzida($A);
           break;
         case 'subespaco':
-
           geraSubespaco($A);
           break;
         default:
@@ -140,11 +139,21 @@ function linhaDegrauReduzida($A)
 
 function geraSubespaco($A)
 {
-  echo "<p>subespaco</p>";
+  
+  file_put_contents("matriz.json", json_encode($A));
+  
+  exec("python main.py",$output, $status);
+
+  if ($status === 0) {
+    echo "<h3>Imagem gerada com sucesso:</h3>";
+    echo "<img src='subespacos.png' alt='Subespaços' style='max-width:600px;' />";
+    echo "<br><a href='subespacos.png' download>Clique aqui para baixar</a>";
+} else {
+    echo "<p>Erro ao gerar imagem:</p>";
+    echo "<pre>" . implode("\n", $output) . "</pre>";
+}
 }
 
 
-
-// Exemplo de uso
 
 ?>
