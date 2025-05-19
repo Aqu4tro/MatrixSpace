@@ -1,2 +1,8 @@
 venv/
 *.json
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.bmp
+*.svg
